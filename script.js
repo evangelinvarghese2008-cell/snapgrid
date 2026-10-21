@@ -1,0 +1,2 @@
+﻿// Part 1: Scaffold & UI Setup
+// Data fetching logic will be added in Part 2.
