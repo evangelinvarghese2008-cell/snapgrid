@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnapGrid | Explore Visuals</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+  <!-- Feature 1: Sticky Header -->
+  <header class="sticky-header">
+    <div class="brand">
+      <h1>SnapGrid</h1>
+      <p class="tagline">Discover high-resolution visuals across the web.</p>
+    </div>
+
+
+    <!-- Search Form -->
+    <form id="search-form" class="search-form">
+      <label for="search-input" class="sr-only">Search images</label>
+      <input 
+        id="search-input" 
+        type="search" 
+        placeholder="Type to search images..." 
+        required 
+      />
+      <button id="search-btn" type="submit">Search</button>
+      <button id="clear-btn" type="reset">Clear</button>
+    </form>
+  </header>
+
+
+  <main class="container">
+    <!-- Feature 2: Category Chips -->
+    <section class="chips-container" aria-label="Quick categories">
+      <button type="button" class="chip">Nature</button>
+      <button type="button" class="chip">Architecture</button>
+      <button type="button" class="chip">Animals</button>
+      <button type="button" class="chip">Abstract</button>
+      <button type="button" class="chip">Technology</button>
+    </section>
+
+
+    <!-- Empty-state Status Line -->
+    <p id="status" class="status-msg">Search for a topic above to explore images.</p>
+
+
+    <!-- Empty Responsive Results Grid -->
+    <section id="results" class="results-grid"></section>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
