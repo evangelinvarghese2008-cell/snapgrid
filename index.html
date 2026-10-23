@@ -1,24 +1,45 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PixelPulse</title>
+  <title>SnapGrid | Explore Visuals</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-  <h1>PixelPulse</h1>
-  <form id="search-form">
-    <input id="search-input" type="search" placeholder="Search images..." />
-    <button type="submit">Search</button>
-  </form>
-</header>
 
-<main>
-  <p id="status"></p>
-  <section id="results"></section>
-</main>
+  <header class="sticky-header">
+    <div class="brand">
+      <h1>SnapGrid</h1>
+      <p class="tagline">Discover high-resolution visuals across the web.</p>
+    </div>
+
+    <form id="search-form" class="search-form">
+      <label for="search-input" class="sr-only">Search images</label>
+      <input 
+        id="search-input" 
+        type="search" 
+        placeholder="Type to search images..." 
+        required 
+      />
+      <button id="search-btn" type="submit">Search</button>
+      <button id="clear-btn" type="reset">Clear</button>
+    </form>
+  </header>
+
+  <main class="container">
+    <section class="chips-container" aria-label="Quick categories">
+      <button type="button" class="chip">Nature</button>
+      <button type="button" class="chip">Architecture</button>
+      <button type="button" class="chip">Animals</button>
+      <button type="button" class="chip">Abstract</button>
+      <button type="button" class="chip">Technology</button>
+    </section>
+
+    <p id="status" class="status-msg">Search for a topic above to explore images.</p>
+
+    <section id="results" class="results-grid"></section>
+  </main>
 
   <script src="script.js"></script>
 </body>
